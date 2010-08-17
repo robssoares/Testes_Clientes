@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @cadastro.nome %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @cadastro.telefone %>
+</p>
+
+<p>
+  <b>Idade:</b>
+  <%= @cadastro.idade %>
+</p>
+
+
+<%= link_to 'Edit', edit_cadastro_path(@cadastro) %> |
+<%= link_to 'Back', cadastros_path %>

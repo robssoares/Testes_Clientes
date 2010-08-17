@@ -1,0 +1,27 @@
+<h1>Listing cadastros</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Telefone</th>
+    <th>Idade</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cadastros.each do |cadastro| %>
+  <tr>
+    <td><%= cadastro.nome %></td>
+    <td><%= cadastro.telefone %></td>
+    <td><%= cadastro.idade %></td>
+    <td><%= link_to 'Show', cadastro %></td>
+    <td><%= link_to 'Edit', edit_cadastro_path(cadastro) %></td>
+    <td><%= link_to 'Destroy', cadastro, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cadastro', new_cadastro_path %>
